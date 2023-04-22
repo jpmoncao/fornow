@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarefas | ForNow</title>
-    
+
     <!-- IONIC -->
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
@@ -13,6 +14,7 @@
 
     <link rel="stylesheet" href="view/assets/css/tarefas.css">
 </head>
+
 <body>
     <main>
         <h1>TAREFA</h1>
@@ -42,22 +44,17 @@
                     <input type="text" placeholder="Título da tarefa" class="titulo-tarefa" name="titulo">
                     <textarea type="text" placeholder="Descrição da tarefa" class="descricao-tarefa" name="descricao"></textarea>
                 </div>
-                
+
                 <div class="conclusao-tarefa">
                     <p>CONCLUSÃO DA TAREFA</p>
                     <p style="font-size: 0.6rem; color: rgba(11, 140, 104, 0.75);">Selecione uma data clicando no calendário</p>
-                    <?php 
-                        $date = new DateTime();
-                        $date->sub(new DateInterval('PT1M'));
+                    <?php
+                    $date = new DateTime();
+                    $date->sub(new DateInterval('PT1M'));
                     ?>
                     <ion-datetime-button datetime="datetime"></ion-datetime-button>
                     <ion-modal>
-                        <ion-datetime 
-                            id="datetime"
-                            locale="pt-br"
-                            min="<?= $date->format('Y-m-d\TH:i:s');?>"
-                            max="<?= date('Y') . '-12-31T23:59:59';?>"
-                        >
+                        <ion-datetime id="datetime" locale="pt-br" min="<?= $date->format('Y-m-d\TH:i:s'); ?>" max="<?= date('Y') . '-12-31T23:59:59'; ?>">
                             <span slot="title">Selecione uma data e hora</span>
                         </ion-datetime>
                     </ion-modal>
@@ -72,6 +69,7 @@
         </section>
     </main>
 </body>
+
 </html>
 
 <!-- TO DO

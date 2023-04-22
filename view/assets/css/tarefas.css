@@ -4,7 +4,6 @@
 body {
     background-color: var(--primColor);
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    font-size: 20px;
     background-color: #E7F0DE;
 }
 
@@ -60,7 +59,13 @@ form {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    margin: auto;
     gap: 5vw;
+}
+
+form>div {
+    min-width: 100%;
 }
 
 p {
@@ -73,7 +78,19 @@ p {
     margin: 0;
 }
 
-.label-text-wrapper > *{
+.tarefas-organizacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vw;
+    width: 100%;
+}
+
+.categoria-tarefa {
+    height: 78px;
+}
+
+.label-text-wrapper>* {
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
@@ -82,83 +99,81 @@ p {
     color: #2DA657;
 }
 
+ion-radio-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
 ion-radio {
     --border-radius: 4px;
     --inner-border-radius: 4px;
-  
+
     --color: #ddd;
     --color-checked: #055941;
 }
-  
+
 ion-radio.ios::part(container) {
     width: 20px;
     height: 20px;
-  
+
     border: 2px solid #ddd;
     border-radius: 4px;
-} 
-  
+}
+
 .radio-checked.ios::part(container) {
     border-color: #055941;
-}
-
-
-.tarefas-organizacao {
-    display: flex;
-    flex-direction: row;
-    gap: 5vw;
-}
-
-.categoria-tarefa {
-    font-size: 15px;
-    margin-left: 2vw;
 }
 
 .tipos-de-tarefa {
     display: flex;
     flex-direction: column;
     justify-content: left;
+    height: 78px;
 }
 
 
-.titulo-tarefa {
-    box-sizing: border-box;
+.titulo-tarefa,
+.descricao-tarefa {
     background: #EDEDED;
     border: 1px solid #787878;
-    box-shadow: 0px 2px 6px rgba(145, 207, 89, 0.25);
     border-radius: 8px;
-    padding: 2vw;
-    margin-bottom: 2vw;
-}
+    box-shadow: 0px 2px 6px rgba(145, 207, 89, 0.25);
 
-.titulo-tarefa::placeholder {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    color: #2DA657;
+    height: 30px;
+    width: 100%;
+    padding: 1.2rem;
+    margin-bottom: 2vw;
+
+    font: normal normal 12px 'DM Sans';
+
+    resize: none;
 }
 
 .descricao-tarefa {
-    box-sizing: border-box;
-    background: #EDEDED;
-    border: 1px solid #787878;
-    box-shadow: 0px 2px 6px rgba(145, 207, 89, 0.25);
-    border-radius: 8px;
-    padding: 2vw;
+    height: 60px;
+    padding-top: .2rem;
 }
 
+.titulo-tarefa::placeholder,
 .descricao-tarefa::placeholder {
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
+    padding-top: 1.2rem;
     color: #2DA657;
 }
 
+ion-datetime-button {
+    display: flex;
+    justify-content: left;
+}
+
+
 .salvar-cancelar {
+    max-width: 100%;
     display: flex;
     gap: 0.5rem;
 }
