@@ -1,0 +1,144 @@
+:root {
+    --color: #055941;
+}
+
+footer {
+    max-width: 100vw;
+    width: 100%;
+    height: 10vh;
+    background: var(--color);
+
+    position: fixed;
+    top: 90vh;
+    left: 50vw;
+    transform: translate(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 1rem 1rem 0 0;
+}
+
+footer ul {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    padding: 0;
+}
+
+footer ul li {
+    position: relative;
+    list-style: none;
+    width: 5rem;
+    height: 5rem;
+    z-index: 1;
+}
+
+footer ul li a{
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-weight: 500;
+    text-align: center;
+}
+
+footer ul li a .icon{
+    position: relative;
+
+    display: block;
+
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    line-height: 6rem;
+    
+    transition: 0.5s;
+}
+
+footer ul li.active a .icon{
+    color: black;
+    transform: translate(-2px, -3rem);
+}
+
+footer ul li a .text{
+    position: absolute;
+    
+    color: white;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+footer ul li.active a .text{
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+footer .indicator {
+    position: absolute;
+    top: -50%;
+
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+
+    background: #29fd53;
+    border: 6px solid #E7F0DE;
+
+    transition: 0.5s;
+}
+
+footer .indicator::before {
+    content: '';
+
+    position: absolute;
+    top: 60%;
+    left: -18px;
+    width: 20px;
+    height: 20px;
+
+
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -9px 0 0 #E7F0DE;
+}
+footer .indicator::after {
+    content: '';
+
+    position: absolute;
+    top: 60%;
+    right: -18px;
+    width: 20px;
+    height: 20px;
+
+
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -9px 0 0 #E7F0DE;
+}
+
+/* INDICATOR SLIDE */
+footer ul li:nth-child(1).active ~ .indicator {
+    transform: translateX(calc(5rem * 0));
+}
+footer ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(calc(5rem * 1));
+}
+footer ul li:nth-child(3).active ~ .indicator {
+    transform: translateX(calc(5rem * 2));
+}
+footer ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(calc(5rem * 3));
+}
+
+/* https://youtu.be/ArTVfdHOB-M?t=491 */

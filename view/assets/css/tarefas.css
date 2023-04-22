@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+body {
+    background-color: var(--primColor);
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: #E7F0DE;
+}
+
+main {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+main h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    margin-top: 6.5rem;
+    color: #055941;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+main section.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+main section.main-header aside {
+    height: 6.875rem;
+    width: 47%;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.linha {
+    align-items: center;
+    margin: 0 auto;
+    background-color: #055941;
+    height: 0.26vh;
+    width: 75%;
+    margin-bottom: 2rem;
+}
+
+section {
+    background-color: white;
+    padding: 5vw;
+    border-radius: 16px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    max-width: 800px;
+    white-space: nowrap;
+    color: #0B8C68;
+    margin: 0;
+}
+
+.label-text-wrapper > *{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 16px;
+    color: #2DA657;
+}
+
+ion-radio {
+    --border-radius: 4px;
+    --inner-border-radius: 4px;
+  
+    --color: #ddd;
+    --color-checked: #055941;
+}
+  
+ion-radio.ios::part(container) {
+    width: 20px;
+    height: 20px;
+  
+    border: 2px solid #ddd;
+    border-radius: 4px;
+} 
+  
+.radio-checked.ios::part(container) {
+    border-color: #055941;
+}
+
+
+.tarefas-organizacao {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+
+.categoria-tarefa {
+    font-size: 15px;
+    margin-left: 2vw;
+}
+
+.tipos-de-tarefa {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+
+.titulo-tarefa {
+    box-sizing: border-box;
+    background: #EDEDED;
+    border: 1px solid #787878;
+    box-shadow: 0px 2px 6px rgba(145, 207, 89, 0.25);
+    border-radius: 8px;
+    padding: 2vw;
+    margin-bottom: 2vw;
+}
+
+.titulo-tarefa::placeholder {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2DA657;
+}
+
+.descricao-tarefa {
+    box-sizing: border-box;
+    background: #EDEDED;
+    border: 1px solid #787878;
+    box-shadow: 0px 2px 6px rgba(145, 207, 89, 0.25);
+    border-radius: 8px;
+    padding: 2vw;
+}
+
+.descricao-tarefa::placeholder {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2DA657;
+}
+
+.salvar-cancelar {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.salvar-cancelar input {
+    background: #055941;
+    box-shadow: 0px 2px 6px rgba(145, 207, 89, 0.25);
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    height: 3rem;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 19px;
+    margin-bottom: 2vw;
+    color: white;
+}
+
+input.salvar-tarefa {
+    width: 10rem;
+}
+
+input.cancelar-tarefa {
+    background: rgba(13, 34, 38, 0.75);
+    box-shadow: 0px 2px 6px rgba(145, 207, 89, 0.25);
+    border-radius: 8px;
+    width: 8rem;
+}
